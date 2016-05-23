@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.4.1/jasmine.css">
+	<script type="text/javascript" src="jasmine/lib/jasmine-2.4.1/jasmine.js"></script>
+	<script type="text/javascript" src="jasmine/lib/jasmine-2.4.1/jasmine-html.js"></script>
+	<script type="text/javascript" src="jasmine/lib/jasmine-2.4.1/boot.js"></script>
+	<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+</head>
+<body ng-app="puzzleApp">
+
+	<div ng-include="type"></div>
+
+	<script type="text/ng-template" id="sliding-puzzle">
+		<fieldset id="sliding-simple">
+			<legend>Basic</legend>
+			<sliding-puzzle size="3x3" src="img/angular.png"></sliding-puzzle>
+		</fieldset>
+
+		<br/>
+	</script>
+</body>
+
+</html>
