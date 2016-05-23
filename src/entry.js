@@ -1,11 +1,13 @@
 require("../style.css");
 
-let angular = require('angular');
-require('./slidingPuzzle.js');
+// const angular = require('angular');
+const slidingpuzzle = require('./slidingPuzzle.js');
+
+slidingpuzzle(angular);
+
 ((angular) => {
 	'use strict';
-
-	var app = angular.module('puzzleApp', ['slidingPuzzle']);
+    var app = angular.module('puzzleApp', ['slidingPuzzle']);
 
     // puzzle types
     var types = [
@@ -22,6 +24,7 @@ require('./slidingPuzzle.js');
     /**
      * Startup
      */
+
      app.run(function($rootScope, $route, $filter) {
      	$rootScope.types = types;
      	$rootScope.type = types[0].id;
@@ -42,6 +45,9 @@ require('./slidingPuzzle.js');
      	{ src: './img/vojta.jpg', title: 'Vojta Jína', rows: 4, cols: 3 }
      	];
      });
+
+     console.log('main');
+
 
 
  })(window.angular);
